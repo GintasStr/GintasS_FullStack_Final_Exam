@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{% static 'mk/css/styles.css' %}"
+    />
+    <link rel="shortcut icon" href="{% static 'mk/img/mk_logo.ico' %}" />
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    {% block menu %}
+
+    <header class="container mt-4">
+      <div class="logo">
+        <a href="{% url 'index' %}">
+          <img
+            src="{% static 'mk/img/logo-red.svg' %}"
+            alt="Močiutės kepyklėlė"
+          />
+        </a>
+      </div>
+      <div class="header_navigation">
+        <ul class="nav justify-content-center">
+          {% for m in menu %}
+          <li class="nav-item p-3 mx-4">
+            <a class="nav-link" href="{% url m.url_name %}"> {{ m.title }} </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="header_contacts">
+        <div class="call_us">
+          <p class="py-0 my-0">Turite klausimų?</p>
+          <p class="py-0 my-0">+370 699 13050</p>
+        </div>
+        <div class="socials">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-instagram"></a>
+        </div>
+      </div>
+    </header>
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="{% static 'mk/img/baner.jpg' %}"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="{% static 'mk/img/baner2.jpg' %}"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="{% static 'mk/img/baner3.jpg' %}"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    {% endblock %} {% block content %} {% endblock %} {% block footer %}
+    <div class="footer">
+      <a href="{% url 'index' %}">
+        <img
+          id="footer-logo"
+          src="{% static 'mk/img/logo-white.png' %}"
+          alt="Močiutės kepyklėlė"
+        />
+      </a>
+      <div class="footer_navigation">
+        <ul class="nav justify-content-center">
+          {% for m in menu %}
+          <li class="nav-item p-3 mx-4">
+            <a class="nav-link" href="{% url m.url_name %}"> {{ m.title }} </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <small class="copyright">
+        &copy; All rights reserved. 2023. Gintas Stražinskas.
+      </small>
+    </div>
+    {% endblock %}
+  </body>
+</html>

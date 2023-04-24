@@ -1,0 +1,105 @@
+{% extends 'mk/base.html' %} {% load static %} {% block content %}
+<div class="container mt-2">
+  <div class="row">
+    <div class="col sm-8">
+      <h4 class="page_title">Užsiprenumeruok naujienlaiškį!</h4>
+      <form method="post" action="{% url 'contacts' %}">
+        {% csrf_token %}
+        <div class="input-group">
+          {{ newsletter_form }}
+          <span class="input-group-btn">
+            <button class="btn btn-outline-secondary" type="submit">
+              Prenumeruok!
+            </button>
+          </span>
+        </div>
+      </form>
+      {% if messages %} {% for message in messages %}
+      <div id="newsletter-message" class="form-message">{{ message }}</div>
+      {% endfor %} {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2">
+  <div class="title_logo">
+    <img src="{% static 'mk/img/contacts.png' %}" alt="" />
+    <h4 class="page_title">{{ title2 }}</h4>
+  </div>
+  <div class="title_description">
+    <img class="sep" src="{% static 'mk/img/sep.svg' %}" alt="" />
+  </div>
+  <div class="col-md-6" id="contacts-info">
+    <h4 class="page_title">Močiutės kepyklėlė</h4>
+    <p>
+      <b>Kalvarijų g. 125, Vilnius. </b>
+      <br />
+      <a
+        id="location"
+        href="https://www.google.com/maps/place/Mo%C4%8Diut%C4%97s+kepykl%C4%97l%C4%97/@54.7112641,25.2850351,17z/data=!3m1!4b1!4m5!3m4!1s0x46dd96b28075a94f:0x4f3d4bf40213ea63!8m2!3d54.7112641!4d25.2868756"
+      >
+        Vieta žemėlapyje - spausti čia.</a
+      >
+      <br />
+      Darbo laikas: I - V 10.00 - 18.00 val. VI, VII ir šventinėmis dienomis
+      nedirbame.
+    </p>
+    <p>
+      <b>Dainavos g. 6, Vilnius (iš Kudirkos g.) </b>
+      <br />
+      <a
+        id="location"
+        href="https://www.google.com/maps/place/Mo%C4%8Diut%C4%97s+kepykl%C4%97l%C4%97/@54.6882756,25.2655355,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xacbcf8b073b16b99!8m2!3d54.6882756!4d25.2677242?hl=lt"
+      >
+        Vieta žemėlapyje - spausti čia.</a
+      >
+      <br />
+      Darbo laikas: I - V 10.00 - 18.00 val. VI, VII ir šventinėmis dienomis
+      nedirbame.
+    </p>
+
+    <p>
+      <b> Kontaktai </b>
+      <br />
+      El. paštas:
+      <a id="location" href="mailto: info@mociuteskepyklele.lt"
+        ><b>info@mociuteskepyklele.lt</b></a
+      >
+      <br />
+      Tel. nr. +370 646 99 13050
+    </p>
+
+    <p>
+      <b> Korespondencija </b>
+      <br />
+      UAB "JUGIVA" <br />
+      Ratnyčios g. 44 - 1, Vilnius
+    </p>
+  </div>
+</div>
+<div class="container mt-2">
+  <div class="title_logo">
+    <h4 class="page_title">{{ title3 }}</h4>
+  </div>
+  <div class="title_description">
+    <img class="sep" src="{% static 'mk/img/sep.svg' %}" alt="" />
+  </div>
+</div>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col sm-8">
+      <form action="{% url 'contacts' %}" method="post">
+        {% csrf_token %} {% for field in contact_form %}
+        <div class="fieldWrapper">
+          {{ field.errors }} {{ field.label_tag }} {{ field }}
+        </div>
+        {% endfor %}
+        <input class="btn btn-outline-secondary" type="submit" value="Siųsti" />
+      </form>
+      {% if messages %} {% for message in messages %}
+      <div id="contact-message" class="form-message">{{ message }}</div>
+      {% endfor %} {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

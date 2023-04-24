@@ -1,0 +1,104 @@
+{% extends 'mk/base.html' %} {% load static %} {% block content %}
+
+<div class="container mt-2">
+  <div class="title_logo">
+    <img src="{% static 'mk/img/diamond.png' %}" alt="" />
+    <h4 class="page_title">{{ title2 }}</h4>
+  </div>
+  <div class="title_description">
+    <img class="sep" src="{% static 'mk/img/sep.svg' %}" alt="" />
+    <p>
+      Kiekvieną rytą minkome ir kildiname tešlą, rūpestingai formuojame ir
+      kepame Jums. Dėl to mūsų gaminiai visada yra švieži, skanūs ir
+      viliojančiai kvepia. Mes rūpinamės savo klientais ir stengiamės visada
+      pateisinti jų lūkesčius. Siekiame, kad kepiniai atrodytų patraukliai, o jų
+      skonis nenusileistų net ir pačių talentingiausių konditerių gaminiams.
+      Garantuojame - pirštus tikrai apsilaižysite.
+    </p>
+    <!-- <img class="sep sep-short" src="{% static 'mk/img/sep.svg' %}" alt="" /> -->
+  </div>
+</div>
+<div class="container mt-4">
+  <div class="row" id="main-section-left">
+    <div class="col-md-7" id="main-text-left">
+      <h4 class="page_title">Platus gaminių asortimentas</h4>
+      <img src="{% static 'mk/img/line.png' %}" alt="" />
+      <p>
+        Siūlome jums paragauti įvairiausių sausainių, pyragų, užkandžių,
+        bandelių, meduolių, bei kartu išgerti puodelį aromatingos kavos.
+        Gardumyną sau čia ras kiekvienas - tiek negalintis gyventi be saldumynų,
+        tiek pirmenybę teikiantis nesaldiems kepiniams. Puoselėdami tradicijas
+        ir laiko patikrintus receptus, atgaivinsime vaikystės prisiminimus ir
+        pavaišinsime pasiilgtais skanėstais. Jei panorėsite, įgyvendinsime Jūsų
+        saldžias idėjas ir iškepsime Jums pagal specialų užsakymą.
+      </p>
+      <img
+        id="main-sep-short"
+        src="{% static 'mk/img/sep-short.png' %}"
+        alt=""
+      />
+    </div>
+    <div class="col-md-4 offset-md-1">
+      <img
+        class="main-image-right"
+        src="{% static 'mk/img/assortment.jpg' %}"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+<div class="container mt-4">
+  <div class="row" id="main-section-right">
+    <div class="col-md-4">
+      <img
+        class="main-image-left"
+        src="{% static 'mk/img/quality.jpg' %}"
+        alt=""
+      />
+    </div>
+    <div class="col-md-7" id="main-text-right">
+      <h4 class="page_title">AUKŠČIAUSIA KOKYBĖ</h4>
+      <img id="line" src="{% static 'mk/img/line.png' %}" alt="" />
+      <p>
+        Visi mūsų kepiniai pagaminti mylinčiomis rankomis, iš kokybiškų ir
+        natūralių žaliavų. Daug dėmesio skiriame produktų sudėtinėms dalims, kad
+        iškepę jie būtų ne tik skanūs, bet ir maistingi. Visada siekiame
+        aukščiausios gaminių kokybės ir to paties reikalaujame iš savo tiekėjų.
+        Juk tikrų naminių gardėsių skoniui svarbi kiekviena smulkmena.
+      </p>
+      <img
+        id="main-sep-short"
+        src="{% static 'mk/img/sep-short.png' %}"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+<div class="container mt-4">
+  <div class="row" id="main-section-left">
+    <div class="col-md-7" id="main-text-left">
+      <h4 class="page_title">MŪSŲ VIZIJA</h4>
+      <img src="{% static 'mk/img/line.png' %}" alt="" />
+      <p>
+        Siekiame tapti mylimiausia kepyklėle kiekvienam, net ir pačiam
+        išrankiausiam, skanumynų mėgėjui. Plėsdami savo produktų asortimentą,
+        tobuliname ir jau pamėgtus kepinius, kad smaližiai visada norėtų grįžti
+        pas mus. Stengiamės Jums pasiūlyti ne tik gardžius kepinius, bet ir
+        nuoširdų bendravimą bei namų jaukumu pripildytą atmosferą.
+      </p>
+      <img
+        id="main-sep-short"
+        src="{% static 'mk/img/sep-short.png' %}"
+        alt=""
+      />
+    </div>
+    <div class="col-md-4 offset-md-1">
+      <img
+        class="main-image-right"
+        src="{% static 'mk/img/vision.jpg' %}"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+{% endblock %}

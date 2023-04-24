@@ -1,0 +1,344 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 95px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 137px;
+  height: 130px;
+  background-color: #fff;
+  border-radius: 65px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  box-shadow: 0 3px 0 hsl(0deg 0% 53% / 50%);
+}
+
+.logo a {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  box-shadow: 2px 4px 3px hsl(0deg 0% 53% / 19%);
+}
+
+/* Header links */
+.header_navigation {
+  display: flex;
+  margin-top: auto;
+  width: 60%;
+  justify-content: space-around;
+}
+
+.nav-link {
+  font-weight: bold;
+  color: #ea5f60;
+}
+
+/* Header contacts */
+.header_contacts {
+  display: flex;
+  width: 25%;
+  justify-content: space-around;
+}
+
+.call_us {
+  color: #ea5f60;
+  font-weight: bold;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Social media logo */
+
+.socials {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.fa {
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  /* border-radius: 50%; */
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+  margin-right: 10px;
+}
+
+.fa-instagram {
+  background: #f40083;
+  color: white;
+}
+
+/* Slider */
+.carousel-inner img {
+  height: 340px;
+}
+
+/* Page title info */
+.title_logo {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.page_title {
+  font-family: "Ubuntu", sans-serif;
+  color: #ea5f60;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.title_description {
+  text-align: center;
+}
+
+.sep {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  object-position: center;
+  max-width: 550px;
+  height: 31px;
+}
+
+.title_description p {
+  color: #1f1f1f;
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: justify;
+  padding-bottom: 32px;
+}
+
+/* Main page information */
+#main-section-right {
+  margin-left: 150px;
+}
+
+#main-section-left {
+  margin-left: 150px;
+}
+
+.main-image-right {
+  width: 300px;
+  height: 300px;
+  margin-top: 15px;
+  margin-left: 50px;
+  border: 1px solid #ea5f60;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.main-image-left {
+  width: 300px;
+  height: 300px;
+  margin-top: 15px;
+  margin-right: 50px;
+  border: 1px solid #ea5f60;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+#line {
+  max-width: 520px;
+}
+
+#main-text-left {
+  max-width: 520px;
+  text-align: justify;
+}
+
+#main-text-right {
+  max-width: 520px;
+  text-align: justify;
+  margin-left: 50px;
+}
+
+#main-sep-short {
+  margin: auto;
+  display: flex;
+  justify-items: center;
+}
+
+/* Categories */
+.col {
+  text-align: center;
+}
+
+#category {
+  margin-bottom: 2rem;
+  border: none;
+  width: 200px;
+  height: 300px;
+}
+
+#category-image {
+  text-align: center;
+  border: 1px solid #ea5f60;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.category-links {
+  color: #ea5f60;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Products */
+#product {
+  margin-bottom: 2rem;
+  border: none;
+  margin: auto;
+}
+
+#product-info {
+  color: #ea5f60;
+  text-decoration: none;
+  text-align: center;
+}
+
+.img-fluid {
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #ea5f60;
+}
+
+/* Blog */
+#blog-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 414px;
+  height: 250px;
+}
+
+.card-img-overlay {
+  text-align: center;
+  margin-top: 80px;
+}
+
+#blog-post {
+  border: none;
+}
+
+#blog-post-image {
+  width: auto;
+  height: 300px;
+}
+
+/* Contacts and forms */
+
+.input-group {
+  max-width: 550px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  max-width: 240px;
+}
+
+#contacts-info {
+  margin: auto;
+  max-width: 550px;
+}
+
+form {
+  margin-bottom: 30px;
+}
+
+.btn {
+  margin-top: 5px;
+}
+
+#location {
+  text-decoration: none;
+}
+
+.fieldWrapper {
+  max-width: 550px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.fieldWrapper input {
+  max-width: 240px;
+}
+
+/* Messages */
+
+#newsletter-message {
+  max-width: 550px;
+  text-align: center;
+  background-color: #ea5f60;
+  color: #fff;
+  margin: auto;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+#contact-message {
+  max-width: 550px;
+  text-align: center;
+  background-color: #ea5f60;
+  color: #fff;
+  margin: auto;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 100px;
+  background-color: #ea5f60;
+  text-align: center;
+}
+
+.footer_navigation a {
+  color: white;
+}
+
+#footer-logo {
+  padding-top: 15px;
+}
+
+.copyright {
+  color: white;
+  margin-bottom: 20px;
+}

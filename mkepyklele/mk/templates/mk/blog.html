@@ -1,0 +1,67 @@
+{% extends 'mk/base.html' %} {% load static %} {% block content %}
+
+<div class="container mt-2">
+  <div class="title_logo">
+    <img src="{% static 'mk/img/blog.png' %}" alt="" />
+    <h4 class="page_title">{{ title2 }}</h4>
+  </div>
+  <div class="title_description">
+    <img class="sep" src="{% static 'mk/img/sep.svg' %}" alt="" />
+    <p>Užrašai iš Močiutės gyvenimo</p>
+    <!-- <img class="sep sep-short" src="{% static 'mk/img/sep.svg' %}" alt="" /> -->
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="row">
+    {% for b in blogpost %} {%if b.published %}
+    <div class="col-lg-4 col-md-6 mb-4">
+      <a href="{% url 'blogPost' b.pk %}">
+        <div class="card bg-dark text-white">
+          {% if b.image %}
+          <img src="{{ b.image.url }}" class="card-img" alt="..." />
+          {% endif %}
+          <div class="card-img-overlay">
+            <h5 class="card-title">{{ b.title }}</h5>
+            <!-- <p class="card-text" id="blog-text">{{ b.text }}</p> -->
+            <p class="card-text">{{ b.created_at }}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div>
+
+<!-- <div class="container mt-4">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card">
+        <div
+          class="bg-image hover-overlay ripple"
+          data-mdb-ripple-color="light"
+        >
+          <img
+            src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
+            class="img-fluid"
+          />
+          <a href="#!">
+            <div
+              class="mask"
+              style="background-color: rgba(251, 251, 251, 0.15)"
+            ></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Post title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#!" class="btn btn-primary">Read</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+{% endblock %}

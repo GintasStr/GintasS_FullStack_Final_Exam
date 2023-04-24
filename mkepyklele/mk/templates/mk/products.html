@@ -1,0 +1,49 @@
+{% extends 'mk/base.html' %} {% load static %} {% block content %}
+
+<div class="container mt-2">
+  <div class="title_logo">
+    <img src="{% static 'mk/img/heart.png' %}" alt="" />
+    <h4 class="page_title">{{ title2 }}</h4>
+  </div>
+  <div class="title_description">
+    <img class="sep" src="{% static 'mk/img/sep.svg' %}" alt="" />
+    <p>
+      Mūsų kepyklėlės gardėsiai sugrąžins Jus į nerūpestingas vaikystės dienas
+      pas močiutę, su meile kepančią jūsų pamėgtas namines bandeles ir pyragus.
+      Stengiamės, kad besimėgaudami mūsų produktais jaustumėtės kaip namie, kur
+      maistas - pats skaniausias, o grįžti taip gera. Palepinkite pažįstamais ir
+      dar neragautais gardėsiais save arba pradžiuginkite kitus smaližius. Tegu
+      kiekviena gera diena prasideda nuo Jūsų mėgstamiausios bandelės!
+    </p>
+    <!-- <img class="sep sep-short" src="{% static 'mk/img/sep.svg' %}" alt="" /> -->
+  </div>
+</div>
+<div class="container mt-4">
+  <div class="row">
+    {% for c in category %} {%if c.published %}
+    <div class="col-4">
+      <a class="category-links" href="{% url 'showProducts' c.slug %}">
+        <div class="card mx-auto" id="category">
+          {% if c.image %}
+          <img
+            src="{{ c.image.url }}"
+            class="card-img-top"
+            id="category-image"
+            alt="..."
+          />
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{ c.name }}</h5>
+            <img
+              class="sep-short"
+              src="{% static 'mk/img/sep-short.png' %}"
+              alt=""
+            />
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div>
+{% endblock %}

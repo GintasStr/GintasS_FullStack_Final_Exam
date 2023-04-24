@@ -1,0 +1,29 @@
+{% extends 'mk/base.html' %} {% load static %} {% block content %}
+
+<div class="container mt-2">
+  <div class="title_logo">
+    <img src="{% static 'mk/img/diamond.png' %}" alt="" />
+    <h4 class="page_title">{{ blogpost.title }}</h4>
+  </div>
+  <div class="title_description">
+    <img class="sep" src="{% static 'mk/img/sep.svg' %}" alt="" />
+  </div>
+</div>
+<div class="container mt-4">
+  <div class="card mb-3" id="blog-post">
+    <h5 class="card-title">{{ blogpost.title }}</h5>
+    <img
+      src="{{ blogpost.image.url }}"
+      class="card-img-top"
+      id="blog-post-image"
+      alt="..."
+    />
+    <div class="card-body">
+      <p class="card-text">{{ blogpost.text }}</p>
+      <p class="card-text">
+        <small class="text-muted">Posted: {{ blogpost.created_at }}</small>
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

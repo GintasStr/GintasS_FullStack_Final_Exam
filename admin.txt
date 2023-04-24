@@ -1,0 +1,6 @@
+login: admin
+password: djangoExam
+
+One more: 
+login: user
+password: djangoUser
